@@ -1,0 +1,137 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Jamshad\\OneDrive\\dummy\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{477764CC-2C01-4A22-AB6B-81BB9214A330}|TeachersApp\\TeachersApp.csproj|c:\\users\\jamshad\\onedrive\\dummy\\teachersapp\\controllers\\nonteachercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{477764CC-2C01-4A22-AB6B-81BB9214A330}|TeachersApp\\TeachersApp.csproj|solutionrelative:teachersapp\\controllers\\nonteachercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{90132760-4DBE-4029-A4FB-FC05D42C60E7}|TeachersApp.Services\\TeachersApp.Services.csproj|c:\\users\\jamshad\\onedrive\\dummy\\teachersapp.services\\repositories\\nonteacherservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{90132760-4DBE-4029-A4FB-FC05D42C60E7}|TeachersApp.Services\\TeachersApp.Services.csproj|solutionrelative:teachersapp.services\\repositories\\nonteacherservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{90132760-4DBE-4029-A4FB-FC05D42C60E7}|TeachersApp.Services\\TeachersApp.Services.csproj|c:\\users\\jamshad\\onedrive\\dummy\\teachersapp.services\\repositories\\teacherservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{90132760-4DBE-4029-A4FB-FC05D42C60E7}|TeachersApp.Services\\TeachersApp.Services.csproj|solutionrelative:teachersapp.services\\repositories\\teacherservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{90132760-4DBE-4029-A4FB-FC05D42C60E7}|TeachersApp.Services\\TeachersApp.Services.csproj|c:\\users\\jamshad\\onedrive\\dummy\\teachersapp.services\\repositories\\positionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{90132760-4DBE-4029-A4FB-FC05D42C60E7}|TeachersApp.Services\\TeachersApp.Services.csproj|solutionrelative:teachersapp.services\\repositories\\positionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{477764CC-2C01-4A22-AB6B-81BB9214A330}|TeachersApp\\TeachersApp.csproj|c:\\users\\jamshad\\onedrive\\dummy\\teachersapp\\controllers\\teachercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{477764CC-2C01-4A22-AB6B-81BB9214A330}|TeachersApp\\TeachersApp.csproj|solutionrelative:teachersapp\\controllers\\teachercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{477764CC-2C01-4A22-AB6B-81BB9214A330}|TeachersApp\\TeachersApp.csproj|c:\\users\\jamshad\\onedrive\\dummy\\teachersapp\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{477764CC-2C01-4A22-AB6B-81BB9214A330}|TeachersApp\\TeachersApp.csproj|solutionrelative:teachersapp\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{477764CC-2C01-4A22-AB6B-81BB9214A330}|TeachersApp\\TeachersApp.csproj|c:\\users\\jamshad\\onedrive\\dummy\\teachersapp\\controllers\\fileuploadcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{477764CC-2C01-4A22-AB6B-81BB9214A330}|TeachersApp\\TeachersApp.csproj|solutionrelative:teachersapp\\controllers\\fileuploadcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "PositionService.cs",
+              "DocumentMoniker": "C:\\Users\\Jamshad\\OneDrive\\dummy\\TeachersApp.Services\\Repositories\\PositionService.cs",
+              "RelativeDocumentMoniker": "TeachersApp.Services\\Repositories\\PositionService.cs",
+              "ToolTip": "C:\\Users\\Jamshad\\OneDrive\\dummy\\TeachersApp.Services\\Repositories\\PositionService.cs",
+              "RelativeToolTip": "TeachersApp.Services\\Repositories\\PositionService.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAD0AAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-20T08:44:09.603Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "TeacherService.cs",
+              "DocumentMoniker": "C:\\Users\\Jamshad\\OneDrive\\dummy\\TeachersApp.Services\\Repositories\\TeacherService.cs",
+              "RelativeDocumentMoniker": "TeachersApp.Services\\Repositories\\TeacherService.cs",
+              "ToolTip": "C:\\Users\\Jamshad\\OneDrive\\dummy\\TeachersApp.Services\\Repositories\\TeacherService.cs",
+              "RelativeToolTip": "TeachersApp.Services\\Repositories\\TeacherService.cs",
+              "ViewState": "AgIAACQBAAAAAAAAAAAkwF0BAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-20T07:31:35.017Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "NonTeacherService.cs",
+              "DocumentMoniker": "C:\\Users\\Jamshad\\OneDrive\\dummy\\TeachersApp.Services\\Repositories\\NonTeacherService.cs",
+              "RelativeDocumentMoniker": "TeachersApp.Services\\Repositories\\NonTeacherService.cs",
+              "ToolTip": "C:\\Users\\Jamshad\\OneDrive\\dummy\\TeachersApp.Services\\Repositories\\NonTeacherService.cs",
+              "RelativeToolTip": "TeachersApp.Services\\Repositories\\NonTeacherService.cs",
+              "ViewState": "AgIAAPEAAAAAAAAAAAAswFwBAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-20T11:39:57.729Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "NonTeacherController.cs",
+              "DocumentMoniker": "C:\\Users\\Jamshad\\OneDrive\\dummy\\TeachersApp\\Controllers\\NonTeacherController.cs",
+              "RelativeDocumentMoniker": "TeachersApp\\Controllers\\NonTeacherController.cs",
+              "ToolTip": "C:\\Users\\Jamshad\\OneDrive\\dummy\\TeachersApp\\Controllers\\NonTeacherController.cs",
+              "RelativeToolTip": "TeachersApp\\Controllers\\NonTeacherController.cs",
+              "ViewState": "AgIAAMwAAAAAAAAAAAAowOMAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-20T11:37:09.242Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "TeacherController.cs",
+              "DocumentMoniker": "C:\\Users\\Jamshad\\OneDrive\\dummy\\TeachersApp\\Controllers\\TeacherController.cs",
+              "RelativeDocumentMoniker": "TeachersApp\\Controllers\\TeacherController.cs",
+              "ToolTip": "C:\\Users\\Jamshad\\OneDrive\\dummy\\TeachersApp\\Controllers\\TeacherController.cs",
+              "RelativeToolTip": "TeachersApp\\Controllers\\TeacherController.cs",
+              "ViewState": "AgIAANMAAAAAAAAAAAAlwOkAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-20T07:29:10.602Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Jamshad\\OneDrive\\dummy\\TeachersApp\\appsettings.json",
+              "RelativeDocumentMoniker": "TeachersApp\\appsettings.json",
+              "ToolTip": "C:\\Users\\Jamshad\\OneDrive\\dummy\\TeachersApp\\appsettings.json",
+              "RelativeToolTip": "TeachersApp\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAACFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-02-20T07:12:54.735Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "FileUploadController.cs",
+              "DocumentMoniker": "C:\\Users\\Jamshad\\OneDrive\\dummy\\TeachersApp\\Controllers\\FileUploadController.cs",
+              "RelativeDocumentMoniker": "TeachersApp\\Controllers\\FileUploadController.cs",
+              "ToolTip": "C:\\Users\\Jamshad\\OneDrive\\dummy\\TeachersApp\\Controllers\\FileUploadController.cs",
+              "RelativeToolTip": "TeachersApp\\Controllers\\FileUploadController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-20T07:12:42.961Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
