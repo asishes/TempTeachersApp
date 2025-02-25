@@ -11,6 +11,7 @@ using TeachersApp.Entity.ModelDTO.LeaveRequestDTO;
 using TeachersApp.Entity.ModelDTO.TransferRequestDTO;
 using TeachersApp.Entity.Models;
 using TeachersApp.Services.Interfaces;
+using TeachersApp.Services.Mapper;
 
 namespace TeachersApp.Services.Repositories
 {
@@ -548,6 +549,100 @@ namespace TeachersApp.Services.Repositories
                  e.Employee.EmployeeType.Employeetype == "Non-Teaching Staff"
                  ) // Filter for Teaching Staff
                 .ToListAsync();
+        }
+        public async Task<bool> DeleteLeaveRequestsAsync(int id)
+        {
+            var leaveRequest = await _context.LeaveRequests
+                   .Where(lr => lr.LeaveRequestID == id)
+                   .FirstOrDefaultAsync();
+
+            if (leaveRequest == null)
+            {
+                throw new ArgumentException("Leave request with the given ID not found.");
+            }
+
+            var pendingStatusId = await _context.Statuses
+      .Where(s => s.StatusText == "Pending" && s.StatusType == "LeaveRequest")
+      .Select(s => s.StatusID)
+      .FirstOrDefaultAsync();
+
+            // Ensure the leave request has a "Pending" status
+            if (leaveRequest.StatusID != pendingStatusId)
+            {
+                throw new ArgumentException("Leave request is not in pending status.");
+            }
+
+            // Get Active and Leave Status IDs for Employees
+            var validEmployeeStatusIds = await _context.Statuses
+                .Where(s => (s.StatusText == "Active" || s.StatusText == "Leave") && s.StatusType == "Employee")
+                .Select(s => s.StatusID)
+                .ToListAsync();
+
+            // Check if a leave request exists with "Pending" status and the employee has "Active" or "Leave" status
+            var isValidEmployee = await _context.Employees
+      .AnyAsync(e => e.EmployeeID == leaveRequest.EmployeeID
+                 && validEmployeeStatusIds.Contains(e.StatusID ?? 0));
+
+            if (!isValidEmployee)
+            {
+                throw new ArgumentException("Employee is not in 'Active' or 'Leave' status.");
+            }
+
+            var LeaveRequest = await _context.LeaveRequests.FindAsync(id);
+            if (LeaveRequest == null) return false;
+
+            _context.LeaveRequests.Remove(LeaveRequest);
+            await _context.SaveChangesAsync();
+            return true;
+        }
+        public async Task<LeaveRequest?> EditLeaveRequestsAsync(int LeaveRequestId, EditLeaveRequestDTO editLeaveRequestDTO)
+        {
+            var leaveRequest = await _context.LeaveRequests
+                 .Where(lr => lr.LeaveRequestID == LeaveRequestId)
+                 .FirstOrDefaultAsync();
+
+            if (leaveRequest == null)
+            {
+                throw new ArgumentException("Leave request with the given ID not found.");
+            }
+
+            var pendingStatusId = await _context.Statuses
+      .Where(s => s.StatusText == "Pending" && s.StatusType == "LeaveRequest")
+      .Select(s => s.StatusID)
+      .FirstOrDefaultAsync();
+
+            if (leaveRequest.StatusID != pendingStatusId)
+            {
+                throw new ArgumentException("Leave request is not in pending status.");
+            }
+
+            // Get Active and Leave Status IDs for Employees
+            var validEmployeeStatusIds = await _context.Statuses
+                .Where(s => (s.StatusText == "Active" || s.StatusText == "Leave") && s.StatusType == "Employee")
+                .Select(s => s.StatusID)
+                .ToListAsync();
+
+            // Check if a leave request exists with "Pending" status and the employee has "Active" or "Leave" status
+            var isValidEmployee = await _context.Employees
+        .AnyAsync(e => e.EmployeeID == leaveRequest.EmployeeID
+                   && validEmployeeStatusIds.Contains(e.StatusID ?? 0));
+
+            if (!isValidEmployee)
+            {
+                throw new ArgumentException("Employee is not in 'Active' or 'Leave' status.");
+            }
+
+
+
+            // Update the existing user with the new values from DTO
+            editLeaveRequestDTO.ToEditLeaveRequests(leaveRequest);
+
+            _context.LeaveRequests.Update(leaveRequest);
+
+
+            await _context.SaveChangesAsync();
+
+            return leaveRequest;
         }
     }
 }

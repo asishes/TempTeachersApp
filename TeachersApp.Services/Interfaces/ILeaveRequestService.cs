@@ -57,5 +57,8 @@ namespace TeachersApp.Services.Interfaces
         Task<List<LeaveRequest>> GetTeachersLeaveRequestsBySchoolIDAsync(int schoolID);
 
         Task<List<LeaveRequest>> GetNonTeachersLeaveRequestsBySchoolIDAsync(int schoolID);
+        Task<bool> DeleteLeaveRequestsAsync(int id);
+
+        Task<LeaveRequest?> EditLeaveRequestsAsync(int LeaveRequestsId, EditLeaveRequestDTO editLeaveRequestDTO);
     }
 }
