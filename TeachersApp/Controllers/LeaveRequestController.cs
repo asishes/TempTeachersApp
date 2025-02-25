@@ -454,6 +454,81 @@ namespace TeachersApp.Controllers
 
             return Ok(leaveDTOs);
         }
+        [HttpDelete("DeleteLeaveRequests/{id}")]
+        public async Task<IActionResult> DeleteLeaveRequests(int id)
+        {
+            try
+            {
+                var result = await _leaveRequestService.DeleteLeaveRequestsAsync(id);
+                if (!result)
+                {
+                    return NotFound("No LeaveRequests found.");
+                }
+            }
+            catch (ArgumentException ex)
+            {
 
+                _logger.LogWarning(ex.Message);
+                if (ex.Message.Contains("Leave request with the given ID not found."))
+                {
+                    return StatusCode(400, new { message = ex.Message, status = 400 });
+                }
+                _logger.LogWarning(ex.Message);
+                if (ex.Message.Contains("Leave request is not in pending status."))
+                {
+                    return StatusCode(400, new { message = ex.Message, status = 401 });
+                }
+                _logger.LogWarning(ex.Message);
+                if (ex.Message.Contains("Employee is not in 'Active' or 'Leave' status."))
+                {
+                    return StatusCode(400, new { message = ex.Message, status = 402 });
+                }
+
+                return BadRequest(new { message = ex.Message });
+            }
+            return Ok(new { StatusCode = 200, Message = " LeaveRequest Deleted" });
+        }
+
+        [HttpPatch("EditLeaveRequests/{id}")]
+        public async Task<IActionResult> EditLeaveRequests(int id, [FromBody] EditLeaveRequestDTO editLeaveRequestDTO)
+        {
+            try
+            {
+                if (editLeaveRequestDTO == null)
+                {
+                    return BadRequest("Invalid Leave data.");
+                }
+
+                var updatedUser = await _leaveRequestService.EditLeaveRequestsAsync(id, editLeaveRequestDTO);
+
+                if (updatedUser == null)
+                {
+                    return NotFound($"LeaveRequest with ID {id} not found.");
+                }
+            }
+            catch (ArgumentException ex)
+            {
+
+                _logger.LogWarning(ex.Message);
+                if (ex.Message.Contains("Leave request with the given ID not found."))
+                {
+                    return StatusCode(400, new { message = ex.Message, status = 400 });
+                }
+                _logger.LogWarning(ex.Message);
+                if (ex.Message.Contains("Leave request is not in pending status."))
+                {
+                    return StatusCode(400, new { message = ex.Message, status = 401 });
+                }
+                _logger.LogWarning(ex.Message);
+                if (ex.Message.Contains("Employee is not in 'Active' or 'Leave' status."))
+                {
+                    return StatusCode(400, new { message = ex.Message, status = 402 });
+                }
+
+                return BadRequest(new { message = ex.Message });
+            }
+
+            return StatusCode(200, new { message = "Updated successfully", status = 200 });
+        }
     }
 }
