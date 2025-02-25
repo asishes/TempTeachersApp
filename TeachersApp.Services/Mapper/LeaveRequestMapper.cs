@@ -64,5 +64,29 @@ namespace TeachersApp.Services.Mapper
                 ApproverComment = rejectLeaveRequest.ApproverComment,
             };
         }
+        public static LeaveRequest ToEditLeaveRequests(this EditLeaveRequestDTO editLeaveRequestDTO, LeaveRequest existingLeaveRequest)
+        {
+            if (editLeaveRequestDTO.FromDate != null)
+            {
+                existingLeaveRequest.FromDate = editLeaveRequestDTO.FromDate.Value;
+            }
+
+            if (editLeaveRequestDTO.ToDate != null)
+            {
+                existingLeaveRequest.ToDate = editLeaveRequestDTO.ToDate.Value;
+            }
+
+            if (editLeaveRequestDTO.RequestorComment != null)
+            {
+                existingLeaveRequest.RequestorComment = editLeaveRequestDTO.RequestorComment;
+            }
+
+            if (editLeaveRequestDTO.DocumentID != null)
+            {
+                existingLeaveRequest.DocumentID = editLeaveRequestDTO.DocumentID;
+            }
+
+            return existingLeaveRequest;
+        }
     }
 }
